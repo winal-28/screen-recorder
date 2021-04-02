@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+  background-size: 100vw 100vh;
+}
+
+.start-recording,
+.stop-recording {
+  padding: 0.5rem 1rem;
+  border-radius: 100vh;
+  text-align: center;
+  font-family: poppins;
+  font-size: 1.15rem;
+  outline: none;
+  border: 1.5px solid #000;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  margin: 1rem 3rem;
+}
+
+.start-recording:focus,
+.stop-recording:focus {
+  box-shadow: 0 0 0 1px#000;
+}
+
+.btn-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.screen-video {
+  height: 70vh;
+  width: 50vw;
+  background: #000;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.screen-parent {
+  display: grid;
+  place-content: center;
+}
