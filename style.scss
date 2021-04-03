@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+$accentColor: #19dafa;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-image: linear-gradient(to bottom right, #0f0e0e 10%, #282828 100%);
+  background-size: 100vw 100vh;
+  overflow: hidden;
+  padding-top: 5vh;
+  .btn-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    .start-recording,
+    .stop-recording {
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.1rem;
+      outline: none;
+      border: 2px solid $accentColor;
+      background: none;
+      color: $accentColor;
+      cursor: pointer;
+      margin: 1rem 3rem;
+      transition: all 0.3s ease;
+      &:hover {
+        background: $accentColor;
+        color: lightgrey;
+      }
+      &:focus,
+      &:focus {
+        box-shadow: 0 0 0 1px#000;
+      }
+    }
+  }
+  .screen-parent {
+    display: grid;
+    place-content: center;
+    .screen-video {
+      height: 70vh;
+      width: 50vw;
+      background: #000;
+      margin: 1rem;
+      border-radius: 10px;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  body {
+    padding: 0;
+    .btn-container {
+      flex-direction: column;
+      .start-recording,
+      .stop-recording {
+        margin: 10px 0;
+      }
+    }
+    .screen-video {
+      width: 90vw !important;
+    }
+  }
+}
